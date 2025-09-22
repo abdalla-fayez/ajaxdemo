@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX and JSON Demo</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; }
+        .slide { display: none; padding: 40px; margin: 20px; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .slide.active { display: block; }
+        h1, h2 { color: #005f73; }
+        .navigation { text-align: center; margin-top: 20px; }
+        .navigation button { padding: 10px 20px; margin: 0 10px; font-size: 16px; cursor: pointer; background-color: #0a9396; color: white; border: none; border-radius: 5px; }
+        .navigation button:disabled { background-color: #ccc; cursor: not-allowed; }
+        #user-list li { margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+
+
+    <div class="navigation">
+        <button id="prevBtn" disabled>Previous</button>
+        <button id="nextBtn">Next</button>
+    </div>
+
+
+    <div id="slide1" class="slide active">
+        <h1>AJAX and JSON Demo</h1>
+        <p>This presentation shows how AJAX uses the Fetch API to load JSON data without reloading the page.</p>
+    </div>
+
+
+    <div id="slide2" class="slide">
+        <h2>What is AJAX?</h2>
+        <ul>
+            <li>Asynchronous JavaScript and XML.</li>
+            <li>A set of techniques for making a web page more dynamic.</li>
+            <li>It enables updates to parts of a page without a full reload.</li>
+        </ul>
+    </div>
+
+
+    <div id="slide3" class="slide">
+        <h2>The Code Example</h2>
+        <p>We use the **Fetch API** to get data from a file called <code>users.json</code>.</p>
+        <pre><code style="background: #e0e0e0; padding: 10px; border-radius: 5px; display: block;">
+fetch('users.json')
+    .then(response => response.json())
+    .then(users => {
+        // Code to display users
+    });
+        </code></pre>
+        <p>This is all done behind the scenes, making the user experience seamless.</p>
+    </div>
+    
+
+    <div id="slide4" class="slide">
+        <h2>Live Demo</h2>
+        <p>Click the button below to load user data asynchronously from the server.</p>
+        <button id="load-data-btn">Load User Data</button>
+        <h3>Loaded Users:</h3>
+        <ul id="user-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
