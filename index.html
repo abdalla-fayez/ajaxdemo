@@ -3,43 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AJAX Demo (using JSON)</title>
+    <title>AJAX and JSON Demo</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; }
         .slide { display: none; padding: 40px; margin: 20px; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
         .slide.active { display: block; }
         h1, h2 { color: #005f73; }
+        h3 { color: #0a9396; }
         .navigation { text-align: center; margin-top: 20px; }
         .navigation button { padding: 10px 20px; margin: 0 10px; font-size: 16px; cursor: pointer; background-color: #0a9396; color: white; border: none; border-radius: 5px; }
         .navigation button:disabled { background-color: #ccc; cursor: not-allowed; }
         #user-list li { margin-bottom: 5px; }
+        ul { list-style-type: disc; margin-left: 20px; }
+        ol { list-style-type: decimal; margin-left: 20px; }
     </style>
 </head>
 <body>
 
-
+    <!-- Navigation Buttons -->
     <div class="navigation">
         <button id="prevBtn" disabled>Previous</button>
         <button id="nextBtn">Next</button>
     </div>
 
-
+    <!-- Slide 1: Introduction -->
     <div id="slide1" class="slide active">
         <h1>AJAX and JSON Demo</h1>
         <p>This presentation shows how AJAX uses the Fetch API to load JSON data without reloading the page.</p>
     </div>
 
-
+    <!-- Slide 2: What is AJAX, Why, and How -->
     <div id="slide2" class="slide">
         <h2>What is AJAX?</h2>
         <ul>
-            <li>Asynchronous JavaScript and XML.</li>
-            <li>A set of techniques for making a web page more dynamic.</li>
-            <li>It enables updates to parts of a page without a full reload.</li>
+            <li>**A**synchronous **J**avaScript **A**nd **X**ML.</li>
+            <li>A set of web development techniques to create more responsive websites.</li>
+            <li>Enables updating parts of a page without a full reload.</li>
         </ul>
+
+        <h3>Why Use AJAX?</h3>
+        <ul>
+            <li>**Improved User Experience:** Provides a smoother, more interactive interface without constant page refreshes.</li>
+            <li>**Enhanced Performance:** Websites feel faster as only necessary data is fetched.</li>
+            <li>**Bandwidth Efficiency:** Reduces server load by only fetching needed content.</li>
+            <li>**Desktop-like Functionality:** Web apps can behave more like traditional desktop applications.</li>
+        </ul>
+
+        <h3>How Does AJAX Work?</h3>
+        <ol>
+            <li>**User Action:** An event (e.g., button click) triggers JavaScript.</li>
+            <li>**Request Object:** JavaScript uses the `XMLHttpRequest` object (or `Fetch` API) to send a request to the server in the background.</li>
+            <li>**Server Processing:** The server processes the request and retrieves data.</li>
+            <li>**Server Response:** The server sends data back (often as JSON).</li>
+            <li>**DOM Update:** JavaScript updates only the relevant part of the webpage using the Document Object Model (DOM) without reloading the entire page.</li>
+        </ol>
     </div>
 
-
+    <!-- Slide 3: The Code Example -->
     <div id="slide3" class="slide">
         <h2>The Code Example</h2>
         <p>We use the **Fetch API** to get data from a file called <code>users.json</code>.</p>
@@ -53,7 +73,7 @@ fetch('users.json')
         <p>This is all done behind the scenes, making the user experience seamless.</p>
     </div>
     
-
+    <!-- Slide 4: Live Demo -->
     <div id="slide4" class="slide">
         <h2>Live Demo</h2>
         <p>Click the button below to load user data asynchronously from the server.</p>
@@ -65,4 +85,3 @@ fetch('users.json')
     <script src="script.js"></script>
 </body>
 </html>
-
