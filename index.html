@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AJAX and JSON Demo</title>
+    <title>AJAX (using JSON) Demo</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; }
         .slide { display: none; padding: 40px; margin: 20px; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
@@ -36,33 +36,33 @@
     <div id="slide2" class="slide">
         <h2>What is AJAX?</h2>
         <ul>
-            <li>**A**synchronous **J**avaScript **A**nd **X**ML.</li>
+            <li><strong>A</strong>synchronous <strong>J</strong>avaScript <strong>A</strong>nd <strong>X</strong>ML.</li>
             <li>A set of web development techniques to create more responsive websites.</li>
             <li>Enables updating parts of a page without a full reload.</li>
         </ul>
 
         <h3>Why Use AJAX?</h3>
         <ul>
-            <li>**Improved User Experience:** Provides a smoother, more interactive interface without constant page refreshes.</li>
-            <li>**Enhanced Performance:** Websites feel faster as only necessary data is fetched.</li>
-            <li>**Bandwidth Efficiency:** Reduces server load by only fetching needed content.</li>
-            <li>**Desktop-like Functionality:** Web apps can behave more like traditional desktop applications.</li>
+            <li><strong>Improved User Experience:</strong> Provides a smoother, more interactive interface without constant page refreshes.</li>
+            <li><strong>Enhanced Performance:</strong> Websites feel faster as only necessary data is fetched.</li>
+            <li><strong>Bandwidth Efficiency:</strong> Reduces server load by only fetching needed content.</li>
+            <li><strong>Desktop-like Functionality:</strong> Web apps can behave more like traditional desktop applications.</li>
         </ul>
 
         <h3>How Does AJAX Work?</h3>
         <ol>
-            <li>**User Action:** An event (e.g., button click) triggers JavaScript.</li>
-            <li>**Request Object:** JavaScript uses the `XMLHttpRequest` object (or `Fetch` API) to send a request to the server in the background.</li>
-            <li>**Server Processing:** The server processes the request and retrieves data.</li>
-            <li>**Server Response:** The server sends data back (often as JSON).</li>
-            <li>**DOM Update:** JavaScript updates only the relevant part of the webpage using the Document Object Model (DOM) without reloading the entire page.</li>
+            <li><strong>User Action:</strong> An event (e.g., button click) triggers JavaScript.</li>
+            <li><strong>Request Object:</strong> JavaScript uses the `XMLHttpRequest` object (or `Fetch` API) to send a request to the server in the background.</li>
+            <li><strong>Server Processing:</strong> The server processes the request and retrieves data.</li>
+            <li><strong>Server Response:</strong> The server sends data back (often as JSON).</li>
+            <li><strong>DOM Update:</strong> JavaScript updates only the relevant part of the webpage using the Document Object Model (DOM) without reloading the entire page.</li>
         </ol>
     </div>
 
     <!-- Slide 3: The Code Example -->
     <div id="slide3" class="slide">
         <h2>The Code Example</h2>
-        <p>We use the **Fetch API** to get data from a file called <code>users.json</code>.</p>
+        <p>We use the <strong>Fetch API</strong> to get data from a file called <code>users.json</code>.</p>
         <pre><code style="background: #e0e0e0; padding: 10px; border-radius: 5px; display: block;">
 fetch('users.json')
     .then(response => response.json())
